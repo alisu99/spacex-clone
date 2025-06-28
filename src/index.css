@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* FONTES */
+@font-face {
+  font-family: 'Verdana';
+  src: url('./fonts/D-DIN-Bold.otf') format('truetype');
+}
+
+
+
+/* BASE */
+body {
+  font: 16px / 24px 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 37.5px;
+}
+
+
+
+/* NAVBAR */
+.navbar {
+  z-index: 99;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+.navbar img {
+  max-width: 150px;
+}
+
+.navbar .nav {
+  display: none;
+}
+
+.navbar li {
+  font-size: small;
+}
+
+@media (max-width: 1023px) {
+  .nav ul {
+    display: none;
+  }
+}
+
+/* BURGUER */
+.burguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  width: max-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: fixed;
+  right: 20px;
+  top: 23px;
+  z-index: 1000;
+}
+
+.b-button {
+  width: 17px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.burguer.open .b-button:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 5px);
+}
+
+.burguer.open .b-button:nth-child(2) {
+  opacity: 0;
+}
+
+.burguer.open .b-button:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, 0px);
+}
+
+
+
+/* BOTÃO CUSTOM */
+.custom-btn {
+  position: relative;
+  color: #fff;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.custom-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.custom-btn:hover::before {
+  transform: scaleY(1);
+}
+
+.custom-btn:hover {
+  color: #000;
+}
+
+
+
+/* MENU ITENS */
+.menu-item {
+  opacity: 0;
+  padding: 7px 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* DELAYS */
+[class^="delay-"] {
+  transition-delay: 0ms;
+}
+
+.delay-0  { transition-delay: 0ms; }
+.delay-1  { transition-delay: 65ms; }
+.delay-2  { transition-delay: 130ms; }
+.delay-3  { transition-delay: 195ms; }
+.delay-4  { transition-delay: 260ms; }
+.delay-5  { transition-delay: 325ms; }
+.delay-6  { transition-delay: 390ms; }
+.delay-7  { transition-delay: 455ms; }
+.delay-8  { transition-delay: 520ms; }
+.delay-9  { transition-delay: 585ms; }
+.delay-10 { transition-delay: 650ms; }
+.delay-11 { transition-delay: 715ms; }
+.delay-12 { transition-delay: 780ms; }
+.delay-13 { transition-delay: 845ms; }
+.delay-14 { transition-delay: 910ms; }
+
+
+
+/* UTILS */
+.custom-mw {
+  max-width: 1300px;
+}
+
+.custom-mt {
+  margin-top: 35px;
+}
+
+.custom-padding {
+  padding: 4rem 0rem;
+}
+
+
+
+/* ASIDE */
+aside {
+  max-width: 100%;
+  padding-left: 1rem;
+}
+
+
+
+/* BACKGROUNDS - MOBILE */
+.herosection {
+  background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Axiom_4_outsidehangar_IMG_3412_mobile_1d63de3e7e.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background2 {
+  background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/home_mars2026_m_f08d127d3e.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background3 {
+  background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Launch_Page_Starlink1_vertical_18_MOBILE_6be64a2e22.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background4 {
+  background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_9_Website_Mobile_4_127d44e6a4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background5 {
+  background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Evasuit_mobile_Vers3_ae50e33c99.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* ======================
+   MEDIA QUERIES (>=768px)
+   ====================== */
+@media (min-width: 768px) {
+
+  .navbar {
+    padding: 2.4rem 7.5rem;
+  }
+
+  .navbar .nav {
+    display: flex;
+  }
+
+  .navbar img {
+    max-width: 200px;
+  }
+
+  .navbar .ml210 {
+    margin-left: -210px;
+  }
+
+  .burguer {
+    top: 40px;
+    right: 30px;
+  }
+
+  aside {
+    max-width: 350px;
+    padding-left: 2rem;
+  }
+
+  .custom-padding {
+    padding: 4rem 6rem;
+  }
+
+  .custom-mw h2 {
+    font-size: xxx-large;
+    max-width: 450px;
+    line-height: 45px;
+  }
+
+
+  
+  /* BACKGROUNDS - DESKTOP */
+  .herosection {
+    background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Axiom_4_outsidehangar_IMG_3412_desktop_f4cf1ef34c.jpg');
+  }
+
+  .background2 {
+    background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/home_mars2026_d_59b1a6ea7a.jpg');
+  }
+
+  .background3 {
+    background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Launch_Page_Starlink1_vertical_18_DESKTOP_c051df793a.jpg');
+  }
+
+  .background4 {
+    background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_9_Website_Desktop_4_f1db4d08ec.jpg');
+  }
+
+  .background5 {
+    background-image: url('https://sxcontent9668.azureedge.us/cms-assets/assets/Eva_Suit_Desktop_alternate_1cf9bae18e.jpg');
+  }
+}
