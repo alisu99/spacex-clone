@@ -7,7 +7,7 @@ Este projeto foi desenvolvido como parte de um desafio técnico com o objetivo d
 ## 🔗 Deploy
 
 Acesse o projeto online em:  
-👉 [https://seu-link-deploy.vercel.app](https://seu-link-deploy.vercel.app)
+👉 [https://spacex-clone-snowy.vercel.app/](https://spacex-clone-snowy.vercel.app/)
 
 ---
 
