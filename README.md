@@ -63,7 +63,7 @@ Criar uma aplicação frontend com alta fidelidade visual e comportamental com o
 
 ```bash
 # Clone este repositório
-git clone https://github.com/alisu99/spacex-replica.git
+git clone https://github.com/alisu99/spacex-clone.git
 
 # Acesse o diretório
 cd spacex-clone
